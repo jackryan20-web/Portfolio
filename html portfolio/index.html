@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jared Kimutai - Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        
+        
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .about-me {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 2;
+        }
+        
+        .personal-details {
+            flex: 1;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .detail-item {
+            margin-bottom: 1rem;
+        }
+        
+        .detail-item strong {
+            display: block;
+            color: var(--primary);
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--accent);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            .about-me {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+        }:root {
+            --primary: #4d4d83;
+            --secondary: #0a0a0a;
+            --dark: #2d3436;
+            --light: #a1a7bd;
+            --accent: #252022;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin: 1rem 0;
+            color: var(--dark);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--secondary), transparent);
+            margin: 2rem 0;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            flex: 1;
+            min-width: 200px;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>👋Hi There!</h1>
+            <h1>Jared Kimutai, </h1>
+            <h2>Full-Stack Developer!</h2>
+            <p>I make the complex simple.</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="divider"></div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>jr1704607@gmail.com</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>0716572667</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>Eldoret, Kenya</p>
+                </div>
+            </div>
+        </section>
+        <div class="intro-image-wrapper" style="text-align: center;margin-bottom: 2rem;"></div>
+            <img src="1.jpg" class="profile" width="15%">
+          </div>
+        <section id="about">
+            <h2>Who am I?</h2>
+            <div class="divider"></div>
+            
+            <div class="about-me">
+                <div class="about-text">
+                    
+                    <p> I am Jared Kimutai a Frontend/Full-Stack Web Developer.</p>
+                    <p>I am passionate about crafting clean, user-friendly, and performant websites. I specialize in responsive design, JavaScript (React/Vue), and modern CSS frameworks. I love turning ideas into functional, beautiful digital experiences. I help businesses and startups build fast, accessible, and SEO-friendly websites that drive engagement and growth.</p>
+                </div>
+                
+                <div class="personal-details">
+                    <div class="detail-item">
+                        <strong>Name</strong>
+                        <p>Jared Kimutai</p>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <strong>Location</strong>
+                        <p>New York, USA</p>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <strong>Age</strong>
+                        <p>25</p>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <strong>Email</strong>
+                        <p>jr1704607@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="services">
+            <h2>My Services</h2>
+            <div class="divider"></div>
+            
+            <div class="services">
+                <div class="service-card">
+                    <h3>Web Development</h3>
+                    <p>I build scalable, secure and high perfomance web applications from frontend to backend,ensuring seamless user experiences and robust functionality.</p>
+                    <p><strong>why choose me?</strong></p>
+                    <li>Clean, maintainable code with best practices.</li>
+                    <li>Agile development with transparent communication.</li>
+                    <li>End to end solution.</li>
+                </div>
+                
+                <div class="service-card">
+                    <h3>E-Commerce Platforms</h3>
+                    <p>I build fast, secure and coversion-optimized online stores with seamless checkout experiences.</p>
+                    <p><strong>Key Services</strong></p>
+                    <li>Custom Online Store Development.</li>
+                    <li>Payment & Checkout Optimization.</li>
+                    <li>Perfomance & Integration</li>
+
+                </div>
+                
+                <div class="service-card">
+                    <h3>For Agencies</h3>
+                    <p>I act as your dedicated tech team, delivering client projects on time and  within budget.</p>
+                    <p><strong>Key services</strong></p>
+                    <li>Agency-ready Stack.</li>
+                    <li>API Integration.</li>
+                    <li>Maintenance & Updates-Security patches, plugin upgrades, backups.</li>
+                    <li>White label Reporting-Weekly updates in your branding.</li>
+
+
+                </div>
+                
+                <div class="service-card">
+                    <h3>API & Third-Party Integration</h3>
+                    <p>As a full-stack developer, I specialize in seamlessly integrating APIs and Integration services.</p>
+                    <p><strong>Key Services</strong></p>
+                    <li>Custom API Dvelopment.</li>
+                    <li>Third-Party API Integration.</li>
+                    <li>Error Handling & Monitoring.</li>
+                </div>
+                
+                <div class="service-card">
+                    <h3>MVP Development</h3>
+                    <p>I help startups and entepreneurs transform ideas into functional, market-ready MVPs using agile Full-Stack development</p>
+                    <p><strong>Key Services</strong></p>
+                    <li>Product Discovery & Technical Consulting.</li>
+                    <li>Rapid Prototyping.</li>
+                    <li>Database & Cloud Integration.</li>
+                    <li>Authentication & User Management.</li>
+
+                </div>
+                
+            </div>
+        </section>
+        <!-- Add these right after the closing </section> tag of "My Services" -->
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="divider"></div>
+
+    <div class="services">
+        <div class="service-card">
+            <h3>Portfolio Website</h3>
+            <p>A personal portfolio built using HTML, CSS, and JavaScript showcasing my skills and projects.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>E-Commerce Site</h3>
+            <p>Fully responsive online store with a shopping cart, built using React and Firebase.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Blog Platform</h3>
+            <p>A minimalistic blog application built using Vue.js and Node.js with Markdown support.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact-form">
+    <h2>Get In Touch</h2>
+    <div class="divider"></div>
+
+    <form action="#" method="POST" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); max-width: 600px; margin: auto;">
+        <div style="margin-bottom: 1rem;">
+            <label for="name" style="display: block; color: var(--primary); margin-bottom: 0.5rem;">Name</label>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <div style="margin-bottom: 1rem;">
+            <label for="email" style="display: block; color: var(--primary); margin-bottom: 0.5rem;">Email</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <div style="margin-bottom: 1rem;">
+            <label for="message" style="display: block; color: var(--primary); margin-bottom: 0.5rem;">Message</label>
+            <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+        </div>
+        <button type="submit" style="background-color: var(--primary); color: white; padding: 0.8rem 1.5rem; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
+    </form>
+</section>
+    </main>
+    <footer>
+        <p>© 2025 Jared Kimutai. All Rights Reserved.</p>
+        <div class="social-links">
+          <a href="https://github.com/your-username" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="your-resume.pdf" download><i class="fas fa-download"></i> Resume</a>
+        </div>
+      </footer>
+    
+    <script>
+        // Simple animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceCards = document.querySelectorAll('.service-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeIn 0.5s ease forwards';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            serviceCards.forEach(card => {
+                card.style.opacity = '0';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
